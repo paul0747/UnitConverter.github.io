@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./main.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script defer src="./main.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+  </head>
+  <body>
+    <section>
+      <!-- Measurement selection -->
+      <div class="container">
+        <!-- Title -->
+        <h1 id="converter">Converter</h1>
+        <!-- Choose unit drop down menu -->
+        <div class="measure1">
+          <div class="select1">
+            <label for="select">Measurement</label>
+            <span class="custom-arrow"></span>
+            <select id="selectOptionInput">
+              <option value="Milimeter">Milimeter</option>
+              <option value="Centimeter">Centimeter</option>
+              <option id=" meter" value="Meter">Meter</option>
+              <option value="Kilometer">Kilometer</option>
+            </select>
+          </div>
+
+          <div class="value-input">
+            <label for="input">Value</label>
+            <input type="number" id="input" name=" input" />
+          </div>
+        </div>
+
+        <!-- Measurement selection -->
+
+        <!-- Convert Button -->
+        <button id="convertBtn" class="btn" onclick="unitMeasureConversion()">
+          Convert
+        </button>
+        <!-- Reset Button -->
+        <button
+          onclick="document.getElementById('input').value = ''"
+          id="resetBtn"
+          class="btn"
+        >
+          Reset
+        </button>
+        <!-- Swap Button -->
+        <button class="btn" id="swapBtn">Swap</button>
+
+        <!-- Measurement output -->
+        <div class="value-output">
+          <div class="select1">
+            <label for="select">Convert to</label>
+            <span class="custom-arrow"></span>
+            <select id="selectOptionOutput">
+              <option value="Milimeter">Milimeter</option>
+              <option value="Centimeter">Centimeter</option>
+              <option id=" meter" value="Meter">Meter</option>
+              <option value="Kilometer">Kilometer</option>
+            </select>
+          </div>
+          <p id="outputValue">Output:</p>
+        </div>
+
+        <!-- Measurement output -->
+      </div>
+    </section>
+  </body>
+</html>

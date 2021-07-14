@@ -1,0 +1,93 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  overflow: hidden;
+  background: #077b8a;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Title */
+#converter {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid gray;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #077b8a;
+  border-radius: 5px;
+  border: 1px solid #077b8a;
+  cursor: pointer;
+  margin: 10px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 300ms ease-in-out;
+}
+
+/* Convert Button */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+.btn:hover::before,
+.btn:focus::before {
+  transform: scaleX(1);
+}
+.btn:hover,
+.btn:focus {
+  color: #077b8a;
+}
+/* Convert Button */
+
+/* Drop down select menu*/
+.select1 {
+  position: relative;
+}
+.select1 select {
+  font-size: 1rem;
+  padding: 0.5em 0.5em;
+  color: #077b8a;
+  border: 1px solid #077b8a;
+}
+
+/* Input Value */
+
+#input {
+  color: #077b8a;
+  border: 1px solid #077b8a;
+  outline: none;
+}
+
+.value-input {
+  padding: 10px 0 20px 0;
+}
+
+/* Output Value */
+.value-output {
+  padding: 20px 0 20px 0;
+}
